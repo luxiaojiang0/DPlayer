@@ -346,6 +346,10 @@
             &.dplayer-volume-icon {
                 width: 43px;
             }
+            &.dplayer-speed-icon {
+                width: fit-content;
+                color: white;
+            }
         }
         .dplayer-volume {
             position: relative;
@@ -518,6 +522,45 @@
                 }
             }
         }
+
+        // 倍速
+        .dplayer-speed {
+            display: inline-block;
+            position: relative;
+            height: 100%;
+            .dplayer-speed-box {
+                position: absolute;
+                left:50%;
+                bottom: 50px;
+                transform: scale(0) translateX(-50%);
+                width: 70px;
+                text-align: center;
+                border-radius: 2px;
+                background: rgba(28, 28, 28, 0.9);
+                padding: 7px 0;
+                transition: all .3s ease-in-out;
+                overflow: hidden;
+
+                z-index: 2;
+
+                &.dplayer-speed-box-open {
+                    transform: scale(1) translateX(-50%);
+                }
+            }
+
+            .dplayer-speed-item,
+            .dplayer-speed-speed-item {
+                height: 30px;
+                padding: 5px 10px;
+                box-sizing: border-box;
+                cursor: pointer;
+                position: relative;
+                &:hover {
+                    background-color: rgba(255, 255, 255, .1);
+                }
+            }
+        }
+
         .dplayer-full {
             display: inline-block;
             height: 100%;

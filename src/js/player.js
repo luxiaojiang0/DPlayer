@@ -15,6 +15,7 @@ import Timer from './timer';
 import Bezel from './bezel';
 import Controller from './controller';
 import Setting from './setting';
+import MyControllItem from './my_controll_item';
 import Comment from './comment';
 import HotKey from './hotkey';
 import ContextMenu from './contextmenu';
@@ -115,6 +116,7 @@ class DPlayer {
         }
 
         this.setting = new Setting(this);
+        this.myControllItem = new MyControllItem(this);
         this.plugins = {};
 
         document.addEventListener(

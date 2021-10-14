@@ -50,6 +50,12 @@ class Template {
         this.ptime = this.container.querySelector('.dplayer-ptime');
         this.settingButton = this.container.querySelector('.dplayer-setting-icon');
         this.settingBox = this.container.querySelector('.dplayer-setting-box');
+
+        this.speedButton = this.container.querySelector('.dplayer-speed-icon');
+        this.speedBox = this.container.querySelector('.dplayer-speed-box');
+        this.speedBoxItem = this.container.querySelectorAll('.dplayer-speed-speed-item');
+        this.speedValueDom = this.container.querySelector('.dplayer-speed-icon .speed-value');
+
         this.mask = this.container.querySelector('.dplayer-mask');
         this.loop = this.container.querySelector('.dplayer-setting-loop');
         this.loopToggle = this.container.querySelector('.dplayer-setting-loop .dplayer-toggle-setting-input');

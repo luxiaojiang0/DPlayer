@@ -98,6 +98,19 @@
         {{ /if }}
     </div>
     <div class="dplayer-icons dplayer-icons-right">
+        <div class="dplayer-speed">
+            <button class="dplayer-icon dplayer-speed-icon" data-balloon="{{ tran('Setting') }}" data-balloon-pos="up">
+                <!--这里并没有监听倍数-->
+                <span class="dplayer-icon-content"><span class="speed-value">1</span>倍</span>
+            </button>
+            <div class="dplayer-speed-box">
+                {{ each options.playbackSpeed }}
+                    <div class="dplayer-speed-speed-item" data-speed="{{ $value }}">
+                        <span class="dplayer-label">{{ $value === 1 ? tran('Normal') : $value }}</span>
+                    </div>
+                {{ /each }}
+            </div>
+        </div>
         {{ if options.video.quality }}
         <div class="dplayer-quality">
             <button class="dplayer-icon dplayer-quality-icon">{{ options.video.quality[options.video.defaultQuality].name }}</button>
