@@ -116,8 +116,10 @@ class Controller {
             percentage = Math.max(percentage, 0);
             percentage = Math.min(percentage, 1);
             this.player.bar.set('played', percentage, 'width');
-            this.player.seek(this.player.bar.get('played') * this.player.video.duration);
+            const time = this.player.bar.get('played') * this.player.video.duration;
+            this.player.seek(time);
             this.player.timer.enable('progress');
+            this.player.events.trigger('click_time_progress', { newTime: time });
         };
 
         this.player.template.playedBarWrap.addEventListener(utils.nameMap.dragStart, () => {

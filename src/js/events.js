@@ -28,6 +28,7 @@ class Events {
             'waiting',
         ];
         this.playerEvents = [
+            'click_time_progress',
             'screenshot',
             'thumbnails_show',
             'thumbnails_hide',
